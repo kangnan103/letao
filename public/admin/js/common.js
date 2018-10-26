@@ -2,6 +2,8 @@
 $(function(){
 
     $(document).ajaxStart(function() {
+        console.log("nianhdfa");
+        
         // 开始进度条
         NProgress.start()
       })
@@ -17,7 +19,7 @@ $(function(){
     $("#cate_con").on("click",function(){
         console.log("hehe");
         
-        $(this).next().slideToggle();
+        $(this).siblings().slideToggle();
     })
 
     $(".icon_menu").on("click",function(){

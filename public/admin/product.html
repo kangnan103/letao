@@ -106,7 +106,7 @@
           </div><!-- /.modal -->
 
         <div class="modal fade" tabindex="-1" role="dialog" id = "add_modal">
-            <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-dialog modal-md" role="document">
               <div class="modal-content">
                  <form>
                     <div class="modal-header">
@@ -117,41 +117,56 @@
                         
                     <div class="form-group">
                         <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" 
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> 
-                                <span class="dropdown_text">请选择一级分类</span>
-                                   
-                                <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" 
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> 
+                            <span class="dropdown_text">请选择二级分类名称</span>
+                            <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            
 
-                                </ul>
-                            </div>
-                            <input type="hidden" name="categoryId">
-                           
-                            <input type="hidden" name="hot" value="1">
+                            </ul>
+                            <input type="hidden" name="brandId">
                         </div>
+                  
+                        <input type="hidden" name="statu" value="1">
+                    </div>
 
-                        <div class="form-group">
-                             <input type="text" class="form-control" autocomplete="off" name="brandName"  placeholder="请输入二级分类名称">
-                          
-                        </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" autocomplete="off" name="proName"  placeholder="请输入商品名称">
+                   </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" name="proDesc" placeholder="请输入商品描述"></textarea>
+                        <!-- <input type="hidden" name="proDesc"> -->
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" autocomplete="off" name="num"  placeholder="请输入商品库存">
+                    </div>
+                    <div class="form-group">
+                         <input type="text" class="form-control" autocomplete="off" name="size"  placeholder="请输入商品尺码(30-50)">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" autocomplete="off" name="oldPrice"  placeholder="请输入商品原价">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" autocomplete="off" name="price"  placeholder="请输入商品现价">
+                    </div>
 
                         <div class="form-group">
                             <label for="file" class="btn btn-default">上传图片</label>
-                            <input type="file" id="file" data-url="/category/addSecondCategoryPic" name="pic1" style="display: none;">
-                            <input type="hidden" name="brandLogo">
+                            <input type="file" id="file" data-url="/product/addProductPic" multiple name="pic1" style="display: none;">
                         </div>
 
-                        <div class="form-group">
-                            <img src="./images/none.png" id="second_img" width="100" height="100" alt="">
+                        <div class="form-group img_box">
+                            <input type="hidden" name="imgStatus">
+                            <!-- <img src="./images/none.png" id="second_img" width="100" height="100" alt=""> -->
                         </div>
                     
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="submit" class="btn btn-primary add">确定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary add">确定</button>
                     </div>
                  </form>
               </div><!-- /.modal-content -->
@@ -160,7 +175,9 @@
     </div>
 
     <script type="text/html" id="tml">
-
+        {{each rows v i}}
+        <li><a data-id="{{v.id}}" href="javascript:;">{{v.brandName}}</a></li>
+        {{/each}}
     </script>
     <script type="text/template" id="tmp">
         {{each rows v i}}

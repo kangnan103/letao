@@ -2,7 +2,7 @@
 $(function(){
 
     $(document).ajaxStart(function() {
-        console.log("nianhdfa");
+        // console.log("nianhdfa");
         
         // 开始进度条
         NProgress.start()

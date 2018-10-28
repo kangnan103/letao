@@ -1,0 +1,54 @@
+
+
+.cate_left {
+    width: 90px;
+    height: 100%;
+
+    float: left;
+    position: relative;
+    li{
+        width: 100%;
+        height: 50px;
+        background-color: pink;
+        &.active {
+            background-color: #fff;
+        }
+
+        a{
+            width: 100%;
+            height: 100%;
+        
+            color: green;
+            text-align: center;
+            line-height: 50px;
+            border-right: 1px solid red;
+            border-bottom: 1px solid red;
+            display: block;
+   
+        }
+    }
+}
+.cate_right {
+    height: 100%;
+    overflow: hidden;
+    background-color: green;
+    position: relative;
+    li {
+         float: left;
+         width: 33.3%;
+         a{
+             width: 100%;
+             height: 100%;
+             display: block;
+         }
+
+         img {
+             width: 62px;
+             height: 62px;
+             margin:0 auto;
+         }
+         p {
+             text-align: center;
+         }
+    }
+}

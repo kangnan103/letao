@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" href="./images/favicon.ico">
     <title>首页</title>
@@ -17,7 +18,7 @@
                 <span class="fa fa-home"></span>
             </a>
             <h4>乐淘云购</h4>
-            <a href="#" class="icon_right">
+            <a href="search.html" class="icon_right">
                 <span class="fa fa-search"></span>
             </a>
         </div>
@@ -26,7 +27,7 @@
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
                     <!--这里放置真实显示的DOM内容-->
-                    <div class="mui-slider">
+                    <!-- <div class="mui-slider">
                         <div class="mui-slider-group mui-slider-loop">
                             <div class="mui-slider-item mui-slider-item-duplicate">
                                 <a href="#">
@@ -77,6 +78,44 @@
                             <div class="mui-indicator"></div>
                             <div class="mui-indicator"></div>
                         </div>
+                    </div> -->
+
+                    <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="./images/banner1.png" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="./images/banner2.png" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="./images/banner3.png" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="./images/banner4.png" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="./images/banner5.png" />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="./images/banner6.png" />
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- 如果需要分页器 -->
+                            <div class="swiper-pagination"></div>
                     </div>
                     <div class="main_nav">
                         <ul class="mui-clearfix">
@@ -193,6 +232,7 @@
     </div>
     <script src="./lib/mui/js/mui.js"></script>
     <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/swiper/js/swiper.min.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/index.js"></script>
 </head>
